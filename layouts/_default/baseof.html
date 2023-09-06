@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ "/style.css" | absURL }}" />
+    <title>{{ .Title }}</title>
+</head>
+<body>
+	<h1 class="title">
+		The Learning Diary of a Software Engineer
+	</h1>
+
+	<a href="{{ "/" | relURL }}">Home</a>
+	{{/*<br>*/}}
+	&nbsp;
+	<a href="{{ "/about/" | relURL }}">About</a>
+
+	<hr>
+    {{ block "main" . }}{{ end }}
+</body>
+</html>
