@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="{{ "/style.css" | absURL }}" />
+	<link rel="stylesheet" href="/css/syntax.css">
     <title>{{ .Title }}</title>
 </head>
 <body>
@@ -10,12 +11,13 @@
 		The Learning Diary of a Software Engineer
 	</h1>
 
-	<a href="{{ "/" | relURL }}">Home</a>
+	<a href="{{ .Site.BaseURL | relURL }}">Home</a>
 	{{/*<br>*/}}
 	&nbsp;
-	<a href="{{ "/about/" | relURL }}">About</a>
+	<a href="{{ "about" | relURL }}">About</a>
 
 	<hr>
     {{ block "main" . }}{{ end }}
 </body>
 </html>
+
